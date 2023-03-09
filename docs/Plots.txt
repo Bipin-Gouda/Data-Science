@@ -1,0 +1,26 @@
+Which plots for what
+
+* Numerical values
+    1. histplot/distplot - numerical values only one attribute (rest kde, color etc)
+    2. scatterplot - to check regression type behaviour bw two numerical values
+
+    #scatterplot - sns.scatterplot(data=df,x=df['SALES_PRICE'],y=df['INT_SQFT'],hue=df['AREA'])
+
+* Categorical values
+    1. countplot - also has 'hue' (x=0,1 Then wrt hue also x axis divided)
+    2. barplot
+    3. for two categorical values pivot_table() / groupby()
+         pivot_table(index='Pclass',values='Survived',aggfunc='sum')  #Titanic
+    
+        O/P 
+            Survived
+    Pclass	
+        1	  136
+        2	   87
+        3	  119
+  
+   crosstab()
+
+* Additional  
+    1. boxplot -outlier detection
+    2. heatmap - correlation

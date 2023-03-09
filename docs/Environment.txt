@@ -1,0 +1,24 @@
+Data_science folder is the environment (virtual environment that I created by default it is activated else I need to actiavte it )
+
+@ To Activate the virtual environment:
+
+1. E:\Data Science>
+2. E:\Data Science>cd Data_science
+3. E:\Data Science>Data_science>Scripts\activate
+4. (Data_science) E:\Data Science>
+
+@ To Deactivate the virtual environment:
+
+1. (Data_science) E:\Data Science>
+2. (Data_science) E:\Data Science>Scripts\deactivate     (else deactivate.bat)
+
+@ To create a Virtual Environment  (from scratch)
+
+1. pip install -virtualenv
+2. Then in any location we can create a virtual environment 
+    open the location in terminal(ie by using cd ) then virtualenv name_of_new_virtualenvironment
+3. Then activate according to the previous steps (Scripts\activate)
+4. pip list : lists all the libraries in the environment
+
+* cls to clear screen in terminal , clear in cmd
+* jupyter-notebook    to run jupyter do this in terminal on path where jupyter is 

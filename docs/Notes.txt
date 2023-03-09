@@ -1,0 +1,85 @@
+***********************************************************
+Ridge and Lasso (Regularisation 1 and 2)
+
+*Bias and variance
+
+*Bias
+
+Generally, a linear algorithm has a high bias, as it makes them learn fast. The simpler the algorithm,
+the higher the bias it has likely to be introduced. Whereas a nonlinear algorithm often has low bias.
+
+Some examples of machine learning algorithms with low bias are Decision Trees, k-Nearest Neighbours and 
+Support Vector Machines. At the same time, an algorithm with high bias is Linear Regression, 
+Linear Discriminant Analysis and Logistic Regression.
+
+Ways to reduce High Bias:
+High bias mainly occurs due to a much simple model. Below are some ways to reduce the high bias:
+
+- Increase the input features as the model is underfitted.
+- Decrease the regularization term.
+- Use more complex models, such as including some polynomial features.
+
+Variance
+
+Examples of low-variance machine learning algorithms include: Linear Regression, Linear Discriminant Analysis 
+and Logistic Regression.
+
+Examples of high-variance machine learning algorithms include: Decision Trees, k-Nearest Neighbors and 
+Support Vector Machines.
+
+*********************************************************************************************************
+
+High bias => Underfitting                
+High variance => Overfitting              
+
+- Low variance , Low bias = Good fit    (not least , low)
+
+An optimal balance of bias and variance would never overfit or underfit the model.
+
+
+**********************************************************************************************************
+
+axis=1, axis=0
+lambda() used when all null to be replace with mean/medaian or mode 
+apply() used when filling must be done using a function
+
+*******************************************************************************************************
+
+os.chdir('Path')
+os.walk
+
+**************************************************************************************************************************
+                                      (1)
+what is converting categorical values to numerical value is called then?
+Labelencoding
+Why is it used? 
+B/c most of the Ml algos are unable to handle categoric data so they must be converted to numeric values
+
+# Import label encoder 
+from sklearn import preprocessing
+# label_encoder object knows how to understand word labels. 
+label_encoder = preprocessing.LabelEncoder()
+# Encode labels in column 'Country'. 
+data['Country']= label_encoder.fit_transform(data[‘Country']) 
+print(data.head())
+
+**********************************************************************************************************
+                                       (2)
+pd.get_dummies()
+OR
+Onehotencoder()   both have same use they convert all categories of a categorical variable to individual attributes
+
+But why is it used?
+a decision tree can be learned directly from categorical data with no data transformation required
+ (this depends on the specific implementation). Many machine learning algorithms, instead, require all the input and output 
+ variables to be numeric.
+In these cases, one-hot encoding comes in help because it transforms categorical data into numerical; in other words:
+it transforms strings into numbers so that we can apply our Machine Learning algorithms without any problems.
+
+But in Titanic it wasn't used but in Chennai it is used why?
+
+
+Ans : Either one of the two (Labelencoding or Onehotencding) is used depending on situation
+
+************************************************************************************************************
+Binning => converting numerical values to categorical by creating bins-(ie ranges for them)
