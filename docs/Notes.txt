@@ -40,8 +40,39 @@ An optimal balance of bias and variance would never overfit or underfit the mode
 **********************************************************************************************************
 
 axis=1, axis=0
-lambda() used when all null to be replace with mean/medaian or mode 
-apply() used when filling must be done using a function
+
+- lambda() & apply() used when all null to be replace with mean/medaian or mode 
+      
+      train['Fare']=train['Fare'].apply(lambda x: np.log(x+1))
+
+- only apply() used when filling must be done using a function
+
+def impute_age(cols):
+        Age = cols[0]
+        Title = cols[1]
+        
+        if pd.isnull(Age):
+            
+            if Title==0:
+                return 30
+            
+            elif Title==1:
+                return 25
+            
+            elif Title==2:
+                return 34
+            
+            elif Title==3:
+                return 8
+            
+            else:
+                return 43
+        
+        else:
+            return Age
+
+
+      df['Age']= df[['Age','Title']].apply(impute_age,axis=1)    
 
 *******************************************************************************************************
 
@@ -58,10 +89,13 @@ B/c most of the Ml algos are unable to handle categoric data so they must be con
 # Import label encoder 
 from sklearn import preprocessing
 # label_encoder object knows how to understand word labels. 
-label_encoder = preprocessing.LabelEncoder()
+                      
+                      label_encoder = preprocessing.LabelEncoder()
+
 # Encode labels in column 'Country'. 
-data['Country']= label_encoder.fit_transform(data[‘Country']) 
-print(data.head())
+
+                      data['Country']= label_encoder.fit_transform(data[‘Country']) 
+                      print(data.head())
 
 **********************************************************************************************************
                                        (2)
@@ -82,4 +116,13 @@ But in Titanic it wasn't used but in Chennai it is used why?
 Ans : Either one of the two (Labelencoding or Onehotencding) is used depending on situation
 
 ************************************************************************************************************
+
 Binning => converting numerical values to categorical by creating bins-(ie ranges for them)
+
+************************************************************************************************************
+- Pandas Series.str.extract() function is used to extract capture groups in the regex pat as columns in a DataFrame.
+For each subject string in the Series, extract groups from the first match of regular expression pattern.
+
+df['Title']=df['Name'].str.extract(' ([A-Za-z]+)\.',expand=False)
+
+

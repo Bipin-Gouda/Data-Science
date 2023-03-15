@@ -1,0 +1,9 @@
+Webscraping is Required for Data Gathering
+ 1. sites can be with login or without login (authentication)
+ 2. Beautifulsoup library is used
+
+
+NOTE 
+- FETCH COVID DATA USING API
+- Create ML model
+- Do visualisations using POWER BI
