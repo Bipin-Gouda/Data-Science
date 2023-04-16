@@ -125,4 +125,6 @@ For each subject string in the Series, extract groups from the first match of re
 
 df['Title']=df['Name'].str.extract(' ([A-Za-z]+)\.',expand=False)
 
+OR we can use smthng like df['Cabin'].split()
+
 
