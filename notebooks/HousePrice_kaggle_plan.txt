@@ -1,0 +1,15 @@
+1. Cleaning
+2. EDA  - regplot,histplot,boxplot,line,count,corr etc
+3. Imputing
+4. Feature Engineering - (ie Creating new features eg "Cabin" or Merging features eg all areas to Total_Area)
+5. Feature Transformations skew,log,
+6. Scaling
+7. target Transformation (if required)
+8. Model selection
+9. Hyperparameter Optimization
+10. Ensembling
+11. Feature selection
+
+
+
+Cleaning -> Removing duplicates,Data type cnvrsn, imputing, scaling, Transformations etc all come under Cleaning

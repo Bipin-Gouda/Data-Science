@@ -1,6 +1,11 @@
 ***********************************************************
-Ridge and Lasso (Regularisation 1 and 2)
+Ridge(L2) and Lasso(L1) (Regularisation 1 and 2), ElasticNet
 
+Ridge: costfunction + lambda(slope)^2   
+Lasso: costfunction + lambda|slope|
+ElasticNet: costfunction + lambda(slope)^2 +lambda|slope|
+
+lambda: a type of learning rate (like alpha in gradient descnt)
 *Bias and variance
 
 *Bias
@@ -72,7 +77,17 @@ def impute_age(cols):
             return Age
 
 
-      df['Age']= df[['Age','Title']].apply(impute_age,axis=1)    
+      df['Age']= df[['Age','Title']].apply(impute_age,axis=1) 
+********************************************************************
+IMPUTATION
+
+
+1. df[[cols]].appply(function,axis=1)       
+2. df[i].fillna(df[i].mode()[0]) or median()[0]/mean()
+        [0] b/c we can hv more than one median or mode
+3. imputer
+4. knn imputer or using knn regressor (for numeric columns only)
+   
 
 *******************************************************************************************************
 
@@ -125,6 +140,9 @@ For each subject string in the Series, extract groups from the first match of re
 
 df['Title']=df['Name'].str.extract(' ([A-Za-z]+)\.',expand=False)
 
-OR we can use smthng like df['Cabin'].split()
+OR we can use smthng like df['Cabin'].split(/)  (/,.,)
 
 
+**********************************************************************
+the doubt:why we need to cnvrt datatypes if in the end all are to be converted to numeric?
+ans:-we need to have proper datatypes to impute the missing values properly
