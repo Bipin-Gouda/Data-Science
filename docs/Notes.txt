@@ -1,4 +1,21 @@
-***********************************************************
+*****************************************************************************************************************+
+Gradient Descent
+
+#### Convergence Formulae
+
+- θ = θ + (α * θ_gradient) => Convergence formulae - used to converge to the minima , 
+    - θ is the parameter b/m
+    - α is the learning rate
+- partial differentiation of cost function (J(θ)) = gradient/slope of b/m
+- (as partial differentiation takes one variable at a time others constant thats what we need)
+- slope of curve of m wrt J(Θ) when b constant and slope of curve of b wrt J(θ) when m constant (Partial Differentiatio)
+- m and J(θ) = 2D curve (we find minima for it ie - m with minimum cost)
+- b and J(θ) = 2D curve
+together m,b,J(θ) = (3D curve with minimum cost m,b)
+
+***********************************************************************************************************
+
+
 Ridge(L2) and Lasso(L1) (Regularisation 1 and 2), ElasticNet
 
 Ridge: costfunction + lambda(slope)^2   
@@ -6,6 +23,11 @@ Lasso: costfunction + lambda|slope|
 ElasticNet: costfunction + lambda(slope)^2 +lambda|slope|
 
 lambda: a type of learning rate (like alpha in gradient descnt)
+the additional terms with costfunction are error terms to avoid overfitting as linear Regression is a very simple model
+
+
+*************************************************************************************************************
+
 *Bias and variance
 
 *Bias
@@ -43,6 +65,8 @@ An optimal balance of bias and variance would never overfit or underfit the mode
 
 
 **********************************************************************************************************
+
+Filling Missing Values / IMPUTATION
 
 axis=1, axis=0
 
@@ -84,10 +108,10 @@ IMPUTATION
 
 1. df[[cols]].appply(function,axis=1)       
 2. df[i].fillna(df[i].mode()[0]) or median()[0]/mean()
-        [0] b/c we can hv more than one median or mode
-3. imputer
+    - [0] b/c we can hv more than one median or mode
+3. sklearn imputer
 4. knn imputer or using knn regressor (for numeric columns only)
-   
+    - cant use directly for categorical values
 
 *******************************************************************************************************
 
@@ -95,11 +119,16 @@ os.chdir('Path')
 os.walk
 
 **************************************************************************************************************************
-                                      (1)
+ENCODING (Label or Onehot or pd.get_dummies)
+********************************************************************************************************
+                                        (1)
 what is converting categorical values to numerical value is called then?
 Labelencoding
 Why is it used? 
 B/c most of the Ml algos are unable to handle categoric data so they must be converted to numeric values
+
+the doubt:why we need to cnvrt datatypes if in the end all are to be converted to numeric?
+ans:-we need to have proper datatypes to impute the missing values properly
 
 # Import label encoder 
 from sklearn import preprocessing
@@ -132,9 +161,12 @@ Ans : Either one of the two (Labelencoding or Onehotencding) is used depending o
 
 ************************************************************************************************************
 
+BINNING
+
 Binning => converting numerical values to categorical by creating bins-(ie ranges for them)
 
 ************************************************************************************************************
+
 - Pandas Series.str.extract() function is used to extract capture groups in the regex pat as columns in a DataFrame.
 For each subject string in the Series, extract groups from the first match of regular expression pattern.
 
@@ -144,5 +176,11 @@ OR we can use smthng like df['Cabin'].split(/)  (/,.,)
 
 
 **********************************************************************
-the doubt:why we need to cnvrt datatypes if in the end all are to be converted to numeric?
-ans:-we need to have proper datatypes to impute the missing values properly
+
+joblib vs pickle
+
+***********************************************************************************
+
+Q: What is  PCA (Principle Component Analysis ) :
+
+ans: 
