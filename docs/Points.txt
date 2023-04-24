@@ -9,9 +9,9 @@ Ridge and Lasso use Gradient Descent by default in sklearn ( they use Stochastic
 
 
 
-1. What is  PCA : Principle Component Analysis : 
+1. What is  PCA : Principle Component Analysis :  (Feature extraction method)
 ans: It is a dimensionality reduction technique -Done (just like regression Bestline,MSE,Finds which columns 
-more important and when )
+more important and when ) target is not to be scaled (target never scaled generally)
 
    NOTE : IN Deep Learning we have Auto Encoders & Decoders are used as PCA for dimensionality reduction in ML we 
    have to use PCA.  
@@ -37,5 +37,7 @@ It is a good practice to fit the scaler on the training data and then use it to 
 avoid any data leakage during the model testing process. Also, the scaling of target values is generally not required.
 
 
-
-
+8. To Do .....
+   - Time series
+   - Sentiment Analysis
+   - NLP

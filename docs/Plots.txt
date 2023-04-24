@@ -3,6 +3,7 @@ Which plots for what
 * Numerical values
     1. histplot/distplot - numerical values only one attribute (rest kde, color etc)
     2. scatterplot - to check regression type behaviour bw two numerical values
+    3. regplot - same as scatterplot but with regression line (bestfit line)
 
     #scatterplot - sns.scatterplot(data=df,x=df['SALES_PRICE'],y=df['INT_SQFT'],hue=df['AREA'])
 
@@ -24,3 +25,5 @@ Which plots for what
 * Additional  
     1. boxplot -outlier detection
     2. heatmap - correlation
+
+

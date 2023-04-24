@@ -1,5 +1,5 @@
 markdown is just like readme of github
-in markdownto get spaces, indentation correctly we write data in bw <pre> </pre> tag
+in markdown to get spaces, indentation correctly we write data in bw <pre> </pre> tag
 
 https://stackoverflow.com/questions/44810511/how-to-add-empty-spaces-into-md-markdown-readme-on-github
 
