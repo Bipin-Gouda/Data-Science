@@ -1,0 +1,22 @@
+PROJECTS
+
+1. Titanic
+2. House Price
+3. Used Mobile Price
+4. Fake News Detection
+5. Stock Price Prediction
+6. Clustering - Recommendation system (Movie,Book,Mobile,Dress,Posts(insta))
+8. NLP -Sentiment Analysis
+9. Time series Analysis
+7. Deployment using Flask
+
+- Handwritten Image
+
+
+CLOUD COMPUTING
+ - AWS  
+
+NLP
+
+Apache Spark (Tool)
+pycaret a tool for model selection , it automatically does kfold cross validation
