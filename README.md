@@ -33,5 +33,3 @@ This folder is an evolving collection of all my **Data Science** work, designed 
 - Experimenting with **MLOps & Model Deployment**  
 
 ---
-
-This **README** gives your folder a **clear purpose and structure**. Let me know if you'd like any modifications! 🚀
